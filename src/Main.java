@@ -27,6 +27,10 @@ public class Main {
                 System.out.println("Error: Target Number and Convert Number are same");
                 Thread.sleep(2000);
                 rewrite = true;
+            }else if(!checkAcceptNum(num,targetN)){
+                System.out.println("\tThat is not allowed number");
+                Thread.sleep(2000);
+                rewrite=true;
             }
         } while (rewrite);
         System.out.println("----------------------------------------");
@@ -45,6 +49,15 @@ public class Main {
         System.out.format("\t%s -> %s\n", num, result);
     }
 
+    // 2024.01.15. version 2 updated : checking allowed number to the number system
+    public static boolean checkAcceptNum(String n,int t){
+        for(String i: n.split("")){
+            if(!i.equals(".") && Integer.parseInt(i)/t>0){
+                return false;
+            }
+        }
+        return true;
+    }
     public static double conToDecimal(int convert, String num) {
         double resultDecimal = 0;
 
