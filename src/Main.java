@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 import static java.lang.Math.pow;
 
+// Version 1 : Converting Number System Calculator
+/*
+ *Version 3 :
+ * I found the errors in Hexadecimal part
+ * Hexadecimal includes letters (A~F), so added convert to number from letters ( rewriting whole logic )
+ * Adding function, which is printing whole converting number system
+ */
 public class Main {
     static String[] hex = { "A", "B", "C", "D", "E", "F" };
 
@@ -73,7 +80,7 @@ public class Main {
                         System.out.format("\tHexadecimal:\t| %s -> %s\n",num,conToNS(16,conToDecimal(targetN,num)));
                     }
                 }
-            }else{
+            }else{                                          // fraction
                 if (convertN == 10) {                       // To is decimal
                     result = conToDecimal(targetN,num)+"";
                 } else {
