@@ -4,6 +4,7 @@ import java.util.Scanner;
 import static java.lang.Math.pow;
 import static java.lang.Math.round;
 
+// 2024.01.13. version 1 updated : Calculator that converts to other number system
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         int targetN, convertN;
